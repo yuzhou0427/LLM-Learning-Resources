@@ -1,0 +1,12 @@
+{
+    "id":"seed_task_8",
+    "name":"english_haiku_generation",
+    "instruction":"请以下面词语为主题写一首诗",
+    "instances":[
+        {
+            "input":"夏天",
+            "output":"不但春妍夏亦佳，随缘花草是生涯。\n鹿葱解插纤长柄，金凤仍开最小花。"
+        }
+    ],
+    "is_classification":false
+}
