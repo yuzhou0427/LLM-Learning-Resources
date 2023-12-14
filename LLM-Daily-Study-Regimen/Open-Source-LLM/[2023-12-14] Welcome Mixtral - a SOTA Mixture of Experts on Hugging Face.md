@@ -5,6 +5,9 @@
 
 github：https://github.com/huggingface/blog/blob/main/mixtral.md
 
+Open LLM Leaderboard：https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
+
+MT-Bench：https://huggingface.co/spaces/lmsys/mt-bench
 
 <br>
 
@@ -194,4 +197,18 @@ accelerate launch --config_file examples/accelerate_configs/multi_gpu.yaml --num
 
 这需要大约 48 小时在单个 A100 上进行训练，但可以通过调整 `--num_processes` 到你可用的 GPU 数量来轻松并行化。
 
+
+## 训练算法及工具
+
+Mixtral基于斯坦福大学[MegaBlocks](https://github.com/stanford-futuredata/megablocks)，一个轻量级MoE训练框架。
+
+MegaBlocks 基于 Megatron-LM 构建，我们支持 MoEs 的数据、专家和流水线并行训练。
+
+- hugging-face blog：https://huggingface.co/blog/moe
+
+- MegaBlocks论文：https://arxiv.org/abs/2211.15841
+
+- MegaBlocks github：https://github.com/stanford-futuredata/megablocks
+
+- Megatron-LM github：https://github.com/NVIDIA/Megatron-LM
 
