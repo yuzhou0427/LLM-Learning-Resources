@@ -117,10 +117,12 @@ LLM的期望输出表示为𝑂，检索候选表示为𝐶，候选的奖励表
 LLM-Embedder的多任务能力使其成为一种多才多艺的解决方案。通过连接到矢量数据库，存储任何需要的外部元素，它可以支持各种检索增强任务。
 
 在这里，我们讨论了LLM-Embedder赋予力量的典型场景（图2），重点关注三个关键问题：
-- 1）在矢量数据库中存储什么；
-- 2）用什么来查询矢量数据库；
-- 3）如何利用检索到的数据。
+1. 在矢量数据库中存储什么；
+2. 用什么来查询矢量数据库；
+3. 如何利用检索到的数据。
 
+
+<br>
 
 - **`Knowledge Enhancement：`**
     在处理知识密集型任务时，可以对知识语料库中的整个文档进行编码并存储在矢量数据库中:
@@ -146,17 +148,12 @@ LLM-Embedder的多任务能力使其成为一种多才多艺的解决方案。�
   - 通过其API执行检索到的工具，执行结果返回供LLM完成剩余生成：[user request, tool’s execution result] → generation。
 
 
+## IMPACT OF LLM-EMBEDDER ON DIFFERENT LLMS
+
+![The impact of LLM-Embedder on different LLMs..png](..%2Fassets%2FThe%20impact%20of%20LLM-Embedder%20on%20different%20LLMs..png)
 
 
-
-
-
-
-
-
-
-
-
+&nbsp;&nbsp;&nbsp;&nbsp;首先，从外部世界检索有助于LLM在所有四种情景下的性能，因为普通LLM（即None）的性能低于检索增强型LLM（BGE和LLM-Embedder）。此外，我们提出的LLM-Embedder能够很好地推广并在大多数数据集上保持其优越性（特别是PopQA和ICL）。唯一的例外是MMLU，其中在使用Qwen、Baichuan和Llama-2-13B时，LLM-Embedder在某种程度上被BGE略微胜过。似乎不同的LLM以不同的方式利用相同的知识，从而获得略有不同的结果。
 
 
 
