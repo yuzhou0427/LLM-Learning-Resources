@@ -26,9 +26,9 @@ MT-Bench：https://huggingface.co/spaces/lmsys/mt-bench
 **Mixtral发布简要摘要：**
 
 - 发布基础版和Instruct版本
-- 支持32,000标记的上下文长度。
+- 支持32,000标记的上下文长度
 - 在大多数基准测试中胜过Llama 2 70B，与GPT3.5相匹敌或超越
-- 支持英语、法语、德语、西班牙语和意大利语。
+- 支持英语、法语、德语、西班牙语和意大利语
 - 在编码方面表现良好，在HumanEval上达到40.2%
 - 具有商业宽松的Apache 2.0许可证
 
