@@ -1,13 +1,53 @@
 # Welcome Mixtral - a SOTA Mixture of Experts on Hugging Face
 
 
-地址：https://huggingface.co/blog/mixtral
+blog地址：https://huggingface.co/blog/mixtral
 
 github：https://github.com/huggingface/blog/blob/main/mixtral.md
 
 Open LLM Leaderboard：https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
 
 MT-Bench：https://huggingface.co/spaces/lmsys/mt-bench
+
+**base model**：https://huggingface.co/mistralai/Mixtral-8x7B-v0.1
+
+**chat model**：https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1
+
+
+- [模型架构](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1/blob/main/config.json)：
+```json
+{
+  "architectures": [
+    "MixtralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mixtral",
+  "num_attention_heads": 32,
+  "num_experts_per_tok": 2,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "num_local_experts": 8,
+  "output_router_logits": false,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "router_aux_loss_coef": 0.02,
+  "sliding_window": 4096,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.36.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+```
+
 
 <br>
 
@@ -82,7 +122,7 @@ MT-Bench：https://huggingface.co/spaces/lmsys/mt-bench
 
 我们提供了两种主要方式来运行 Mixtral 模型的推理：
 
-- 通过 🤗 Transformers 的 pipeline() 函数。
+- 通过 🤗 Transformers 的 `pipeline()` 函数。
 - 使用文本生成推理（Text Generation Inference），支持连续批处理、张量并行等高级功能，实现极快的推理结果。
 
 
